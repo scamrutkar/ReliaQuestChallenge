@@ -1,0 +1,6 @@
+com.example.rqchallenge
+com.example.rqchallenge.employees.constant
+com.example.rqchallenge.employees.controller
+com.example.rqchallenge.employees.data
+com.example.rqchallenge.employees.model
+com.example.rqchallenge.employees.service
