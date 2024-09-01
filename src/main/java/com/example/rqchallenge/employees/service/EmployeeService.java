@@ -46,7 +46,7 @@ public class EmployeeService implements IEmployeeService {
         try {
             EmployeeResponse empResponse = restClient.execute(EmployeeConstant.GET_EMPLOYEE_BY_ID_URI,
                     HttpMethod.GET, EmployeeResponse.class, pathVariable);
-            if(empResponse.getData() != null) {
+            if(empResponse.getData() == null) {
                 LOGGER.info("[getEmployeeById] Employee data doesn't exists with empId : {}", id);
                 throw new NoSuchElementException();
             }
@@ -97,7 +97,7 @@ public class EmployeeService implements IEmployeeService {
         pathVariable.put("id", id);
         JsonNode empResponse = restClient.execute(EmployeeConstant.DELETE_EMPLOYEE_BY_ID_URI,
                 HttpMethod.DELETE, JsonNode.class, pathVariable);
-        if(empResponse.path("data") == null)
+        if(empResponse.path("data").isMissingNode() || empResponse.path("data") == null)
             throw new NoSuchElementException();
         return id;
     }
