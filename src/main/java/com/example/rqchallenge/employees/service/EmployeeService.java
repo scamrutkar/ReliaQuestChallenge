@@ -61,6 +61,16 @@ public class EmployeeService implements IEmployeeService {
             if(opEmp.isPresent()) return opEmp.get();
 
             throw new NoSuchElementException();
+        }catch(Exception e){
+            LOGGER.info("[getEmployeeById] Internal server error, checking mock data.");
+            Optional<Employee> opEmp = dataProvider.getData()
+                    .getData().stream()
+                    .filter(emp -> emp.getId().equals(id))
+                    .findFirst();
+
+            if(opEmp.isPresent()) return opEmp.get();
+
+            throw new NoSuchElementException();
         }
     }
 
@@ -109,6 +119,9 @@ public class EmployeeService implements IEmployeeService {
                     HttpMethod.GET, EmployeesResponse.class);
         }catch(HttpClientErrorException e){
             LOGGER.info("[getAllEmployee] Too many requests on dummy host, mocking the response");
+            empResponse = dataProvider.getData();
+        }catch(Exception e){
+            LOGGER.info("[getAllEmployee] Internal Server on dummy host, mocking the response");
             empResponse = dataProvider.getData();
         }
         return empResponse;
