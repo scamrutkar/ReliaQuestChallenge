@@ -76,7 +76,7 @@ public class EmployeeServiceTest {
     public void testGetEmployeeById_NotFund(){
 
         Map<String, String> pathVariable = new HashMap<>();
-        pathVariable.put("id", "3");
+        pathVariable.put("id", "345");
 
         EmployeeResponse mockEmployeeResponse = new EmployeeResponse();
         mockEmployeeResponse.setStatus("Failed");
@@ -85,7 +85,7 @@ public class EmployeeServiceTest {
         Mockito.when(restClient.execute(EmployeeConstant.GET_EMPLOYEE_BY_ID_URI,
                 HttpMethod.GET, EmployeeResponse.class, pathVariable)).thenReturn(mockEmployeeResponse);
 
-        assertThrows(NoSuchElementException.class, ()->{employeeService.getEmployeeById("3");});
+        assertThrows(NoSuchElementException.class, ()->{employeeService.getEmployeeById("345");});
     }
 
     @Test

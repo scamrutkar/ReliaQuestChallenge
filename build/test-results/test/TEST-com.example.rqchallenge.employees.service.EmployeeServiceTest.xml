@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.rqchallenge.employees.service.EmployeeServiceTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2024-09-01T07:33:58" hostname="ADMINs-MacBook-Air.local" time="0.108">
+  <properties/>
+  <testcase name="testGetEmployeeById_NotFund()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.017"/>
+  <testcase name="testGetEmployeeById_Success()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.007"/>
+  <testcase name="testGetEmployeesByNameSearch_Success()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.005"/>
+  <testcase name="testDeleteEmployeeById_NotFound()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.006"/>
+  <testcase name="testGetAllEmployees_Success()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.006"/>
+  <testcase name="testDeleteEmployeeById_Success()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.005"/>
+  <testcase name="testDeleteEmployeeById_TooManyRequests()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.005"/>
+  <testcase name="testGetEmployeeHighestSalary_Success()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.007"/>
+  <testcase name="testCreateEmployee_TooManyRequests()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.012"/>
+  <testcase name="testGetHighestSalaryOfEmployees_Success()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.008"/>
+  <testcase name="testCreateEmployee_Success()" classname="com.example.rqchallenge.employees.service.EmployeeServiceTest" time="0.005"/>
+  <system-out><![CDATA[2024-09-01 13:03:52.938  INFO 34201 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.rqchallenge.employees.service.EmployeeServiceTest], using SpringBootContextLoader
+2024-09-01 13:03:52.943  INFO 34201 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.rqchallenge.employees.service.EmployeeServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-09-01 13:03:52.944  INFO 34201 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.rqchallenge.employees.service.EmployeeServiceTest]: EmployeeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-09-01 13:03:52.963  INFO 34201 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.rqchallenge.RqChallengeApplication for test class com.example.rqchallenge.employees.service.EmployeeServiceTest
+2024-09-01 13:03:52.967  INFO 34201 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-09-01 13:03:52.969  INFO 34201 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@60c98f25, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@20c3b34b, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1eb906f3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@58e02359, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@74fc3fc7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@491893f8, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f408ab6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@46e388ec, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@53f495f0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5efe5b25, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@45707f76, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1f0e2bdc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@682266d8]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.1)
+
+2024-09-01 13:03:58.040  INFO 34201 --- [    Test worker] c.e.r.e.service.EmployeeServiceTest      : Starting EmployeeServiceTest using Java 17.0.3.1 on ADMINs-MacBook-Air.local with PID 34201 (started by sagar in /Users/sagar/Downloads/ReliaQuest/java-employee-challenge)
+2024-09-01 13:03:58.040  INFO 34201 --- [    Test worker] c.e.r.e.service.EmployeeServiceTest      : No active profile set, falling back to default profiles: default
+2024-09-01 13:03:58.365  INFO 34201 --- [    Test worker] c.e.r.e.data.EmployeeDataProvider        : [EmployeeDataProvider::init] initializing employee dummy data
+2024-09-01 13:03:58.846  INFO 34201 --- [    Test worker] c.e.r.e.service.EmployeeServiceTest      : Started EmployeeServiceTest in 5.87 seconds (JVM running for 18.178)
+2024-09-01 13:03:58.868  INFO 34201 --- [    Test worker] c.e.r.employees.service.EmployeeService  : [getEmployeeById] Employee data doesn't exists with empId : 345
+2024-09-01 13:03:58.869  INFO 34201 --- [    Test worker] c.e.r.employees.service.EmployeeService  : [getEmployeeById] Internal server error, checking mock data.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
